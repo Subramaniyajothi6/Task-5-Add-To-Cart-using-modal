@@ -29,9 +29,11 @@ const Cart = ({ cart, setCart }) => {
         <>
             <div id="cart" className="fixed inset-0 bg-black/80 bg-opacity-10  items-center justify-center z-50 hidden flex-col p-4" onClick={carttoggle}>
 
-                <div id="cart-container" className='bg-[#00CAFF] container mx-auto rounded-md  w-300 ' onClick={(e) => e.stopPropagation()}>
+            
 
+                <div id="cart-container" className='bg-[#00CAFF] container mx-auto rounded-md  w-300 h-200 overflow-scroll ' onClick={(e) => e.stopPropagation()}>
 
+                    <h2 className="text-2xl font-bold text-center my-4">Shopping Cart</h2>
 
                     {cart.map((i) => {
                         console.log(i);
@@ -48,7 +50,7 @@ const Cart = ({ cart, setCart }) => {
                                         </div>
                                     </div>
 
-                                    <button className=" bg-red-600 text-white px-2 py-1 rounded-md hover:text-red-700 button " onClick={() => removeItem(i)}>
+                                    <button className=" bg-red-600 text-white px-2 py-1 rounded-md hover:text-red-200 button " onClick={() => removeItem(i)}>
                                         Remove
                                     </button>
 

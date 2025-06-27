@@ -44,7 +44,7 @@ const ProductCard = ({addProductToCart}) => {
 
                     <div className='sm:block flex flex-col justify-between items-center  w-full sm:w-72 h-full'>
 
-                        <h3 className="text-xl font-semibold hover:text-blue-600 mb-3">
+                        <h3 className="text-xl font-semibold hover:text-[#4300FF] mb-3">
                             {item?.title.length > 20 ? `${item.title.slice(0, 20)}...` : item?.title}
                         </h3>
 
@@ -54,7 +54,7 @@ const ProductCard = ({addProductToCart}) => {
                         </p>
                         <button
                             onClick={() => addProductToCart(item)}
-                            className=" bg-[#00FFDE] flex items-center px-2 py-1 rounded-md gap-5">
+                            className=" bg-[#00FFDE] flex items-center px-2 py-1 rounded-md gap-5 cursor-pointer hover:scale-105 transition-all duration-200">
                             <FiShoppingCart className=" size-5 btn-cart" />
                             <p className="">Add to Cart</p>
                         </button>
