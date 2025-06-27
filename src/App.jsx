@@ -58,16 +58,16 @@ const App = () => {
 
 
   return (
-    <>
-      <div className='container mx-auto flex justify-between items-center p-4 bg-gray-100 shadow-md'>
+    <div className="bg-[#4300FF] min-h-screen">
+      <div className='container mx-auto flex justify-between items-center p-4 bg-[#00CAFF] shadow-md'>
         <h1 className="text-3xl font-bold text-center my-8">Product List</h1>
-        <button className='flex items-center gap-2 bg-yellow-300 py-1 px-2 rounded' onClick={toggleCartVisibility}>  <FiShoppingCart className=" size-5 btn-cart" /> {cart.length} </button>
+        <button className='flex items-center gap-2 bg-[#00FFDE] py-1 px-2 rounded' onClick={toggleCartVisibility}>  <FiShoppingCart className=" size-5 btn-cart " /> {cart.length} </button>
 
       </div>
 
       <ProductCard addProductToCart={addProductToCart} />
       <Cart cart={cart} setCart={setCart} />
-    </>
+    </div>
   )
 }
 
